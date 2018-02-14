@@ -18,6 +18,10 @@ class BankAccount
 		accounts
 	end
 
+	def self.account_total
+		return @@account_total
+	end
+
 	def total 
 		@mo_money = @savings + @checking
 		puts "You currently have #{@mo_money} in Checking & Savings."

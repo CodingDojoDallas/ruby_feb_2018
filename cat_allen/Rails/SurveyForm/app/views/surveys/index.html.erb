@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form</title>
+</head>
+<body>
+	<h2>New Survey</h2>
+	<form action="/surveys" method="post">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<p>Your Name: <input type="text" name="survey[name]"></p>
+		<p>Dojo Location: 
+			<select name="survey[location]">
+				<option value="mars">Mars</option>
+				<option value="moon">The Moon</option>
+				<option value="earth">Earth</option>
+			</select></p>
+		<p>Favorite Language: 
+			<select name="survey[language]">
+				<option value="ruby">Ruby</option>
+				<option value="mean">MEAN</option>
+				<option value="python">Python</option>
+			</select></p>
+		<p>Comment(optional): <input type="text" name="survey[comment]"></p>
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>
