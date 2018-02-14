@@ -5,12 +5,17 @@ class BankAccount
 		@savings = 0
 		@acct_num = generate_acct
 		@@num_accounts += 1
-		@interest = .01
+		@interest = 0.01
 	end
 
 	#CREATE METHOD TO RETURN TOTAL NUMBER OF ACCOUNTS (CLASS VARIABLE)
 	def self.num_accounts
 		return @@num_accounts
+	end
+
+	def acct_num
+		generate_acct
+		self
 	end
 
 	#CREATE METHOD TO RETURN USER CHECKING BALANCE
@@ -72,5 +77,5 @@ end
 account = BankAccount.new
 p account.acct_num
 p account.checkings_bal
-p account.deposit(20,checking)
+p account.deposit(20,checkings)
 p account.checkings_bal
