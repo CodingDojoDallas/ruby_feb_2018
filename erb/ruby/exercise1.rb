@@ -50,16 +50,62 @@ puts "yeaaaaa"
 # end
 # puts sayer_err '', ''
 
-def guess_number guess
-    number = 25
-    unless guess < number
-        puts "Too high!"
+# def guess_number guess
+#     number = 25
+#     unless guess < number
+#         puts "Too high!"
+#     end
+#     unless guess > number
+#         puts "Too low"
+#     end
+#     unless guess != number
+#         puts "You got it!"
+#     end
+# end
+# guess_number 25
+
+
+# class User
+#     attr_accessor :first_name, :last_name
+#     def initialize(f,l)
+#         @first_name = f
+#         @last_name = l
+#     end
+# end
+
+# champ = User.new('Erbold', 'Uran')
+
+# p champ.first_name
+
+# class User
+#     def self.foo
+#         puts "Holla! Shot colla! 20 inch blades, on the impala!"
+#     end
+# end
+
+# User.foo
+
+class CodingDojo 
+    @@no_of_branches = 0
+    def initialize(id, name, address)
+        @branch_id = id 
+        @branch_name = name
+        @branch_address = address
+        @@no_of_branches += 1
+        if @@no_of_branches < 2 then puts "\nI now have #{@@no_of_branches} notch on my belt."
+        else puts "\nI now have #{@@no_of_branches} notches on my belt." end
     end
-    unless guess > number
-        puts "Too low"
+    def hello
+        puts "Hello World! I am #{@branch_name}!"
     end
-    unless guess != number
-        puts "You got it!"
+    def display_all
+        puts "Branch ID: #{@branch_id}"
+        puts "Branch Name: %s" % @branch_name
+        puts "Branch Address: #{@branch_address}"
     end
 end
-guess_number 25
+
+bboy = CodingDojo.new(709, 'Bmoammaama', 'San Fran')
+bboy.display_all
+bgirl = CodingDojo.new('s7evin', 'Cools', 'Houston')
+bgirl.display_all
