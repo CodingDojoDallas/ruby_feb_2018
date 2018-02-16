@@ -11,25 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180216065825) do
+ActiveRecord::Schema.define(version: 20180216193135) do
 
-  create_table "messages", force: :cascade do |t|
-    t.text     "content"
-    t.integer  "user_id"
+  create_table "dojos", force: :cascade do |t|
+    t.string   "name"
+    t.string   "city"
+    t.string   "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "messages", ["user_id"], name: "index_messages_on_user_id"
-
-  create_table "users", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "password"
-    t.string   "email"
-    t.integer  "age"
+  create_table "ninjas", force: :cascade do |t|
+    t.string   "fname"
+    t.string   "lname"
+    t.integer  "dojo_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "ninjas", ["dojo_id"], name: "index_ninjas_on_dojo_id"
 
 end
