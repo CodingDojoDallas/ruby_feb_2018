@@ -33,6 +33,7 @@ Forms and Strong Params - https://youtu.be/EVRscMktCEs <br>
 Layouts / Asset Pipeline - https://youtu.be/4uOBt24Cd40 <br>
 
 ## Demos
+Dojo Dashboard II - https://youtu.be/JgXnfZLE9xI <br>
 
 
 ## Resources
