@@ -34,6 +34,7 @@ Layouts / Asset Pipeline - https://youtu.be/4uOBt24Cd40 <br>
 
 ## Demos
 Dojo Dashboard II - https://youtu.be/JgXnfZLE9xI <br>
+Login and Registration - https://youtu.be/OnLxnNEIgC0 <br>
 
 
 ## Resources
