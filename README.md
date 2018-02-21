@@ -36,7 +36,7 @@ Authentication and Authorization - https://youtu.be/zcTrW7H8vSI <br>
 ## Demos
 Dojo Dashboard II - https://youtu.be/JgXnfZLE9xI <br>
 Login and Registration - https://youtu.be/OnLxnNEIgC0 <br>
-Default Application - 
+Default Application - https://youtu.be/13PKK-0h5zU <br>
 
 
 ## Resources
