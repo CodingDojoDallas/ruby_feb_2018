@@ -31,10 +31,12 @@ Self Joins - https://youtu.be/P81SVvsfkPM <br>
 Controllers and Views - https://youtu.be/5T_rvY8Q7nE <br>
 Forms and Strong Params - https://youtu.be/EVRscMktCEs <br>
 Layouts / Asset Pipeline - https://youtu.be/4uOBt24Cd40 <br>
+Authentication and Authorization - https://youtu.be/zcTrW7H8vSI <br>
 
 ## Demos
 Dojo Dashboard II - https://youtu.be/JgXnfZLE9xI <br>
 Login and Registration - https://youtu.be/OnLxnNEIgC0 <br>
+Default Application - 
 
 
 ## Resources
