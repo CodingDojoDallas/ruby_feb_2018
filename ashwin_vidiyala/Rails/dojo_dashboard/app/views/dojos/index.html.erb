@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>All Dojos' Information</title>
+  </head>
+  <body>
+    <table>
+      <h2>Listing <%= @dojos.count %> Dojos</h2>
+      <tr>
+        <th>Coding Dojo Branch</th>
+        <th>Street</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Actions</th>
+      </tr>
+      <% @dojos.each do |dojo| %>
+        <tr>
+          <td><%= dojo.branch %></td>
+          <td><%= dojo.street %></td>
+          <td><%= dojo.city %></td>
+          <td><%= dojo.state %></td>
+          <td><a href="<%= dojo_path dojo.id %>">Show</a> <a href="<%= edit_dojo_path dojo.id %>">Edit</a> <a href="<%= dojo_path dojo.id%>" data-method = 'delete'>Destroy</a></td>
+        </tr>
+      <% end %>
+    </table>
+
+    <a href="<%= new_dojo_path %>"><button>New Dojo</button></a>
+
+    <% if flash[:success] %>
+      <p><%= flash[:success] %></p>
+    <% end %>
+  </body>
+</html>

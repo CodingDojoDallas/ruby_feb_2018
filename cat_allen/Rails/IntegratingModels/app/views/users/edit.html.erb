@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit User</title>
+</head>
+<body>
+	<h2>Edit User: <%= @user.name %></h2>
+	<form action="<%= users_path %>" method="post">
+		<input name="_method" type="hidden" value="patch">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<p>Name: <input type="text" name="name" value="<%= @user.name %>"></p>
+		<button type ="submit">Submit</button>
+	</form>
+</body>
+</html>
