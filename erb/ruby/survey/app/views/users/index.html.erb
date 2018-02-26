@@ -1,0 +1,32 @@
+        
+<h2>User</h2>
+<form action = '/users' method = 'post'>
+        <input type = 'hidden' name = 'authenticity_token' value = '<%= form_authenticity_token %>'>
+        Your Name: <input type = 'text' name = 'user[name]' placeholder = 'Name' /><br/>
+        Dojo Location: <select name="user[dojo]">
+            <option value="Dallas">Dallas</option>
+            <option value="San Fran">San Fran</option>
+            <option value="San Jose">San Jose</option>
+        </select>
+        Language: <select name="user[language]">
+            <option value="Python">Python</option>
+            <option value="Ruby">Ruby</option>
+            <option value="Javascript">Javascript</option>
+        </select><br>
+        Comment (optional): <textarea name = 'user[comment]' placeholder = 'Comment'></textarea><br>
+        <input type='submit' value='Create'/>
+</form>
+
+<h1>Editing <%= @anime.name %></h1>
+<form action="/animes/<%= @anime.id %>" method="post">
+        <input type='hidden' name='_method' value='update' />
+        <input type='hidden' name='authenticity_token' value='<%= form_authenticity_token %>' />
+        <input type="text" name="name" value="<%= @anime.name %>" />
+        <input type="submit" value="Updating Anime" />
+</form> 
+
+<form action="/animes/<%= @anime.id %>" method="post">
+        <input type="hidden" name="_method" value="delete" />
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+        <input type="submit" value="delete" />
+</form>

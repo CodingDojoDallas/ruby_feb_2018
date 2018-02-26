@@ -1,13 +1,25 @@
 Rails.application.routes.draw do
-  get 'users/index'
-  post 'creator' => 'users#create'
-  root 'users#index'
+  get 'dojos' => 'dojos#index'
 
+  root 'dojos#index'
+
+  get 'dojos/new'
+  
+  post 'dojos' => 'dojos#create'
+
+  delete 'dojos/:id' => 'dojos#destroy'
+
+  get 'dojos/:id' => 'dojos#show'
+
+  patch 'dojos/:id' => 'dojos#update'
+
+  get 'dojos/:id/edit' => 'dojos#edit'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
