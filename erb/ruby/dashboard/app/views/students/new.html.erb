@@ -1,0 +1,14 @@
+<h1>New</h1>
+
+<form action = "/dojos/<%= @dojo.id %>/students" method = "post">
+    <input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>" />
+    First Name: <input type = "text" name = "student[fname]" /><br>
+    Last Name: <input type = "text" name = "student[lname]" /><br>
+    Email: <input type = "text" name = "student[email]" /><br>
+    Dojo: <select name = "student[dojo_id]">
+        <option value = "<%= @dojo.id %>"><%= @dojo.branch %></option>
+    </select><br>
+    <input type = "submit" value = "Create" />
+</form>
+
+<a href = "/">Home</a>  |  <a href = "/dojos/<%= @dojo.id %>/students"><%= @dojo.branch %></a>

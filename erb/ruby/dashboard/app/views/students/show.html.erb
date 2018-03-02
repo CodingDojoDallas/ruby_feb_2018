@@ -1,0 +1,30 @@
+<h1><%= @dojo.branch %>`s <%= @student.fname %> <%= @student.lname %></h1>
+<p><%= @student.email %></p>
+
+
+<h3>Cohort</h3>
+<table>
+    <thead>
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Email</td>
+        </tr>
+    </thead>
+    <% @cohort.each do |person| %>
+    <tbody>
+        <% if person != @student %>
+        <% if person.created_at.day == @student.created_at.day %>
+        <tr>
+            <td><%= person.fname %></td>
+            <td><%= person.lname %></td>
+            <td><%= person.email %></td>
+        </tr>
+        <% end %>
+        <% end %>
+    </tbody>
+    <% end %>
+</table>
+
+
+<a href = "/">Home</a>  |  <a href = "/dojos/<%= @dojo.id %>/students/<%= @student.id %>/edit">Edit</a>

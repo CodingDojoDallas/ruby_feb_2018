@@ -1,0 +1,13 @@
+<h1>Editing <%= @student.fname %> <%= @student.lname %></h1>
+
+<form action = "/dojos/<%= @dojo.id %>/students/<%= @student.id %>" method = "post">
+    <input type = "hidden" name = "_method" value = "patch" />
+    <input type = "hidden" name = "authenticity_token" value = "<%= form_authenticity_token %>" />
+    First Name: <input type = "text" name = "student[fname]" placeholder = "<%= @student.fname %>" /><br>
+    Last Name: <input type = "text" name = "student[lname]" placeholder = "<%= @student.lname %>" /><br>
+    Email: <input type = "text" name = "student[email]" placeholder = "<%= @student.email %>" /><br>
+    <input type = "submit" value = "Update" /><br>
+</form>
+
+
+<a href = "/">Home</a>  |  <a href = "/dojos/<%= @dojo.id %>/students/<%= @student.id %>"><%= @student.fname %></a>
