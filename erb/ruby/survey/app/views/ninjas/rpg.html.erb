@@ -1,0 +1,23 @@
+<h1>Hello!</h1>
+<p>Your Gold: <%= session[:count] %></p>
+
+<h2>The Farm</h2>
+<form action="ninjas/farm" method="post">
+    <input type="hidden" name="authenticity_token" value="whahooo"/>
+    <input type='hidden' name="type" value="Farm"/>
+    <input type="submit" value="Find Gold!"/>
+</form>
+
+<h2>The Casino</h2>
+<form action="ninjas/casino" method="post">
+    <input type="hidden" name="authenticity_token" value="whahooo"/>
+    <input type='hidden' name="type" value="Casino"/>
+    <input type="submit" value="Find Gold!"/>
+</form>
+
+<h2>Activities</h2>
+<% if session[:activities] %>
+    <% session[:activities].each do |x| %>
+        <p><%= x %></p>
+    <% end %>
+<% end %>    

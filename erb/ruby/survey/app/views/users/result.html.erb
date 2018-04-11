@@ -1,0 +1,17 @@
+<html>
+<head>
+</head>
+<body>
+<h1>Student</h1>
+
+<p><%= flash[:count] %></p>
+<table>
+    Name: <tr><%= @user.name %></tr><br>
+    Dojo Location: @<tr><%= @user.dojo %></tr><br>
+    Language: <tr><%= @user.language %></tr><br>
+    Comment: <tr><%= @user.comment %></tr><br>
+</table>
+
+<a href="/users"><button>Go Back</button></a>
+</body>
+</html>

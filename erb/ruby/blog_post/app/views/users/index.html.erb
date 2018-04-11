@@ -1,0 +1,31 @@
+<h1>My Users</h1>
+<table>
+    <thead>
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Email</td>
+            <td>Friends Of</td>
+        </tr>
+    </thead>
+    <tbody>
+    <% @users.each do |user| %>
+        <tr>
+            <td><%= user.fname %></td>
+            <td><%= user.lname %></td>
+            <td><%= user.email %></td>
+            <td><% @user.friendofs do |mybffs| %><%= mybffs.fname %><% end %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>
+
+
+<h2>New Users</h2>
+<form action='creator' method='post'>
+    <input type=hidden name='authenticity_token' value='<%= form_authenticity_token %>' />
+    <input type=text name='fname' placeholder='First Name'/>
+    <input type=text name='lname' placeholder='Last Name'/>
+    <input type=text name='email' placeholder='Email'/>
+    <input type=submit value='Submit' />
+</form>
